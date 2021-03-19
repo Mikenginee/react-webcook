@@ -1,0 +1,222 @@
+.recipe-modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    /* align-items: flex-start; */
+    justify-content: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.recipe-modal.active {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    /* align-items: flex-start; */
+    justify-content: center;
+    pointer-events: all;
+    opacity: 1;
+}
+
+.recipe-modal-window {
+    /* margin-top:100px; */
+    border-radius: 20px;
+    background-color: #fff;
+    /* min-width: 250px; */
+    max-width: 600px;
+    min-height: 150px;
+    max-height: 90vh;
+}
+
+.recipe-modal-window__header {
+    display: flex;
+    justify-content: space-between;
+    padding:4px 10px;
+    font-size:26px;
+    border-bottom:1px solid black;
+}
+
+.recipe-modal-window__header-close {
+    cursor:pointer;
+}
+
+.recipe-modal-window__body {
+    display: flex;
+    padding:10px 20px;
+}
+
+.recipe-modal-window__body-list {
+    list-style:none;
+    padding: 0 0 10px 0;
+}
+
+.recipe-modal-window__body-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.recipe-modal-window__body-image-container img {
+    border-radius: 20px;
+    box-shadow: 0px 0px 4px 1px black;
+}
+
+.recipe-modal-window__body-list-container {
+    padding:4px 10px;
+    max-height: 60vh;
+    overflow-y: scroll;
+}
+
+
+
+::-webkit-scrollbar {
+    width: 14px;
+    transition: 1s linear;
+    background: transparent;
+}
+
+::-webkit-scrollbar-track {
+    background: #999;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    border:1px solid gray;
+    box-shadow: inset 0px 0px 4px 1px black;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    border:1px solid gray;
+    background: linear-gradient(#333333,#434343);
+}
+
+.ingredient:not(:last-child) {
+margin-bottom: 4px;
+}
+
+.recipe-modal-window__footer {
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    padding:10px;
+}
+
+.recipe-modal-window__footer button {
+    padding:8px 10px;
+    outline:none;
+    color:white;    
+    background: #000;
+    border:1px solid black;
+    border-radius: 6px;
+    transition:0.3s all linear;
+    cursor:pointer;
+}
+
+.recipe-modal-window__footer-link {
+    text-decoration: none;
+    font-size: 14px;
+    padding:6px 8px;
+    outline:none;
+    color:white;    
+    background: #000;
+    border:1px solid black;
+    border-radius: 6px;
+    transition:0.3s all linear;
+    cursor:pointer;
+    margin-right: 10px;
+}
+
+.recipe-modal-window__footer button:hover .recipe-modal-window__footer-link {
+    color:black;
+}
+
+.recipe-modal-window__footer button:hover, .recipe-modal-window__footer-link:hover {
+    background: white;
+    color:black;
+    border:1px solid black;
+    box-shadow: 0px 0px 4px 1px black;
+}
+
+.recipe-modal-window__footer button:not(:last-child) {
+    margin-right: 10px;
+}
+
+.recipe-modal-window__footer-redirect {
+    text-decoration: none;
+    font-size: 14px;
+    padding:6px 8px;
+    outline:none;
+    color:white;    
+    background: #000;
+    border:1px solid black;
+    border-radius: 6px;
+    transition:0.3s all linear;
+    cursor:pointer;
+    margin-right: 10px;
+}
+
+.recipe-modal-window__footer-redirect:hover {
+    color:black;
+    background-color: #fff;
+    box-shadow: 0px 0px 4px 1px black;
+}
+
+
+@media (max-width:768px) {
+    .recipe-modal-window {
+        max-width:380px;
+    }
+
+    .recipe-modal-window__body {
+        flex-direction: column;
+    }
+    .recipe-modal-window__body-image-container img {
+        max-width:  140px;
+    }
+
+    .recipe-modal-window__body-list {
+        margin-top: 6px;
+        font-size:14px;
+    }
+
+    .recipe-modal-window__header {
+        font-size:16px;
+        font-weight: 700;
+    }
+
+    .recipe-modal-window__body-list-container {
+        max-width: 340px;
+        max-height:300px;
+    }
+
+    .recipe-modal-window__body-list-container > p {
+        font-size:16px;
+        font-weight: 700;
+    }
+
+    .recipe-modal-window__footer > button {
+        font-size:12px;
+    }
+
+    .recipe-modal-window__footer a {
+        font-size:12px;
+        padding:8px 10px;
+    }
+}

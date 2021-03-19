@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Redressed&family=Ubuntu&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background-color: #999;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app {
+    min-height: 100vh;
+    display: grid;
+    background:url('./images/bg-kitchen.jpg'), linear-gradient(rgb(228, 225, 225), #aaaeb3);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+
+    grid-template: [start] " navbar" auto  [row2]
+    [row2] " content" 1fr [row3]
+    [row3] " footer" auto [row-end]
+    /  1fr
+    ;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+
+
+.content {
+    grid-area: content;
+    background-color: rgb(89, 208, 255);
+    background-color: transparent;
+    box-shadow: inset 0px 0px 4px 1px black;   
+    transition: linear 1s;
+    animation-name: animate-back;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    box-shadow:inset 0px 0px 4px 1px black;
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes animate-back {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.recipes {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+    grid-template-columns: repeat(4, 1fr)
+    
+}
+
+.navbar {
+    grid-area: navbar;
+    background-color: #2AABE4;
+    background-color: transparent;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #212121;
+    background-color: #2AABE4;
+    background-color: transparent;
+}
+
+.no-results {
+    font-size:32px;
+    color:red;
+    margin:20px 40px;
+}
+
+@media (max-width:1280px) {
+    .app {
+        grid-template: [start] "navbar" auto [row2]
+        [row2] "content" 1fr [row3]
+        [row3] "footer" auto [row-end]
+        /1fr
+    }
+
+    .recipes {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media (max-width:960px) {
+    .recipes {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+@media (max-width:530px) {
+    .recipes {
+        grid-template-columns: repeat(1,1fr);
+    }
 }

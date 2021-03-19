@@ -1,0 +1,118 @@
+.contacts-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0px 0px 4px 1px #434343;
+    background-color: rgb(89, 208, 255);
+    background-color: transparent;
+    text-align: center;
+    animation-name:animate-contacts;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.contacts-wrapper a {
+    color:black;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    font-size:32px;
+    margin-top: 7px;
+    transition:0.5s all linear;
+}
+
+.contacts-wrapper a:hover {
+    color:white;
+}
+
+.contacts-buttons {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+@keyframes animate-contacts {
+    0%{
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+.contacts-wrapper__form {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 14px;
+    padding:20px;
+}
+
+.contacts-wrapper__form-title {
+    color: #FFDBFF;
+    padding:10px 0px;
+}
+
+.contacts-wrapper__form-input {
+    padding:10px 4px;
+    border:none;
+    outline:none;
+    background-color: transparent;
+    border-bottom: 1px solid black;
+    min-height: 40px;
+    color:white;
+}
+
+.contacts-wrapper__form-input::placeholder {
+    font-family: sans-serif;
+    opacity:0.7;
+    color: white;
+}
+
+.contacts-wrapper__form-input:not(:last-child) {
+    margin-bottom:22px;
+}
+
+.contacts-wrapper__form-input:last-child {
+    padding:4px;
+    resize:none;
+    min-height:  90px;
+    min-width: 280px;
+    max-width: 400px;
+    max-height: 180px;
+}
+
+.contacts-wrapper__form-button {
+    padding:8px 10px;
+    outline:none;
+    color:white;    
+    background: #000;
+    border:1px solid black;
+    border-radius: 6px;
+    transition:0.3s all linear;
+    cursor:pointer;
+}
+
+.contacts-wrapper__form-button:hover {
+    background: white;
+    color:black;
+    border:1px solid black;
+    box-shadow: 0px 0px 4px 1px black;
+}
+
+@media (max-width:420px) {
+    .contacts-wrapper__form {
+        padding: 0;
+    }
+
+    .contacts-wrapper__form-title {
+        font-size:18px
+    }
+
+    .contacts-wrapper__form-input:last-child {
+        min-width: 250px;
+    }
+}
+

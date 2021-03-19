@@ -1,0 +1,98 @@
+.usePage-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    animation-name: animate-fade;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-duration: .8s;
+    box-shadow: inset 0px 0px 4px 1px black;
+    background-color: #2AABE4;
+    background-color: transparent;
+    padding:10px 40px;
+}
+
+@keyframes animate-fade{
+    0% {
+        opacity:0;
+        /* transform: translateY(-100%); */
+    }
+    100% {
+        opacity:1;
+        /* transform: translateY(0); */
+    }
+}
+
+.usePage-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:16px;
+    color:#212121;
+    text-align: center;
+    transition: all ease 0.2s;
+    box-shadow: inset 0px 0px 2px 1px #434343;
+}
+
+.usePage-item:not(:last-child) {
+    margin-right: 10px;
+}
+
+
+.usePage-rules {
+    background-color: rgb(183, 214, 177,0.7);
+    
+}
+
+.usePage-rules:hover {
+    transform:scale(1.04);
+}
+
+.usePage-rules h2 {
+    padding:4px 0 10px 0;
+}
+
+.usePage-login {
+    background-color: rgb(89, 208, 255,0.7);
+}
+
+.usePage-login:hover {
+    transform:scale(1.04);
+}
+
+.usePage-login h2, .usePage-login p:not(:last-child) {
+    padding:0 0 12px 0;
+}
+
+.usePage-navigation {
+    background-color: rgba(166, 230, 137, 0.7);
+}
+
+.usePage-navigation:hover {
+    transform: scale(1.04);
+}
+
+.usePage-login h2, .usePage-login p:not(:last-child) {
+    padding:0 0 12px 0;
+}
+
+@media (max-width:768px) {
+    .usePage-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap:10px;
+    }
+
+    .usePage-item:not(:last-child) {
+        margin: 0;
+    }
+}
+
+@media (max-width:420px) {
+    .usePage-item  h2{
+        font-size:18px;
+    }
+    
+    .usePage-item p {
+        font-size:14px;
+    }
+}

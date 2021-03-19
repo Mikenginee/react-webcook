@@ -1,0 +1,135 @@
+.footer-wrapper {
+    padding:20px 45px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo-wrapper {
+    font-size:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo {
+    color:black;
+    text-decoration: none;
+    font-size:28px;
+    font-weight: 700;
+}
+
+.footer-logo-icon {
+    margin-left: 4px;
+}
+
+.footer-body {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer-body-links {
+    justify-content: center;
+    display: flex;
+}
+
+.footer-body-links__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0,0,0,0.8);
+    padding:2px 4px;
+    box-shadow: 0px 0px 4px 1px black;
+    border-radius: 4px;
+    color:white;
+    font-size:14px;
+    text-decoration: none;
+    transition: 0.5s linear;
+    border:1px solid transparent;
+    outline:none;
+    cursor: pointer;
+}
+
+.footer-body-links__item:hover {
+    border:1px solid black;
+    background-color: rgb(255,255,255,0.5);
+    color:black;
+}
+
+.footer-body-links__item:not(:last-child) {
+    margin-right: 16px;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:26px;
+}
+
+.footer-icons__item {
+    font-size:28px;
+    transition: 0.4s linear;
+    cursor:pointer;
+    color:black;
+    background-color: transparent;
+    outline:none;
+    border:none;
+}
+
+.footer-icons__item:hover {
+    color:white;
+}
+
+.footer-icons__item:not(:first-child) {
+    margin-left: 6px;
+}
+
+@media (max-width:1280px) {
+    .footer-body-links__item {
+        font-size:12px;
+        text-align: center;
+    }
+}
+
+@media (max-width:768px) {
+
+    .footer-body {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .footer-body-links {
+        grid-row-start: 2;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    
+    .footer-icons {
+        grid-row-start: 3;
+    }
+
+    .footer-logo-wrapper {
+        font-size:16px;
+    }
+    
+    .footer-body-links__item {
+        font-size:12px;
+    }
+
+    .footer-icons__item {
+        font-size:22px;
+    }
+}
+
+@media (max-width:420px) {
+    .footer-wrapper {
+        padding:0;
+    }
+
+    .footer-body-links__item:not(:last-child) {
+        margin-right: 2px;
+    }
+}
