@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/react-webcook/static/css/main.93040b58.chunk.css",
+    "main.js": "/react-webcook/static/js/main.6c68d3cf.chunk.js",
+    "main.js.map": "/react-webcook/static/js/main.6c68d3cf.chunk.js.map",
+    "runtime-main.js": "/react-webcook/static/js/runtime-main.f7fc5972.js",
+    "runtime-main.js.map": "/react-webcook/static/js/runtime-main.f7fc5972.js.map",
+    "static/js/2.9980d74b.chunk.js": "/react-webcook/static/js/2.9980d74b.chunk.js",
+    "static/js/2.9980d74b.chunk.js.map": "/react-webcook/static/js/2.9980d74b.chunk.js.map",
+    "index.html": "/react-webcook/index.html",
+    "static/css/main.93040b58.chunk.css.map": "/react-webcook/static/css/main.93040b58.chunk.css.map",
+    "static/js/2.9980d74b.chunk.js.LICENSE.txt": "/react-webcook/static/js/2.9980d74b.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/react-webcook/static/media/bg-kitchen.596e6227.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f7fc5972.js",
+    "static/js/2.9980d74b.chunk.js",
+    "static/css/main.93040b58.chunk.css",
+    "static/js/main.6c68d3cf.chunk.js"
+  ]
+}
